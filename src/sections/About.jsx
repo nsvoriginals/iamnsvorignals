@@ -5,16 +5,22 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const About = () => {
-  const text = `Passionate about clean architecture
-    I build scalable, high-performance solutions
-    from prototype to production`;
-  const aboutText = `Obsessed with building fast, intuitive apps—from pixel-perfect React UIs to bulletproof serverless backends. Every line of code is a promise: quality that users feel.
-  When I’m not shipping:
-⚡️ Open-sourcing my latest experiment (or hacking on yours)
-🎥 Teaching devs on Twitch/YouTube—because rising tides lift all ships
-🧗 Rock climbing (problem-solving with real stakes)
-🎸 Strumming chords while CI pipelines pass (multitasking at its finest)`;
+  const text = `I design blazing fast systems,
+  clean architecture, and high-performance apps
+  that scale from zero to infinity.`;
+
+  const aboutText = `Curious about how everything works—from processors to galaxies. 
+  I focus on building open-source tools, 
+  engineering systems that feel lightning quick, 
+  and exploring the intersection of mathematics and computing.
+
+  Outside of coding:
+  - Writing and experimenting with music
+  - Reading about space and deep tech
+  - Studying math and algorithms to sharpen problem-solving`;
+
   const imgRef = useRef(null);
+
   useGSAP(() => {
     gsap.to("#about", {
       scale: 0.95,
@@ -23,7 +29,6 @@ const About = () => {
         start: "bottom 80%",
         end: "bottom 20%",
         scrub: true,
-        markers: false,
       },
       ease: "power1.inOut",
     });
@@ -38,20 +43,21 @@ const About = () => {
       scrollTrigger: { trigger: imgRef.current },
     });
   });
+
   return (
     <section id="about" className="min-h-screen bg-black rounded-b-4xl">
       <AnimatedHeaderSection
-        subTitle={"Cod with purpose, Built to scale"}
+        subTitle={"Code with purpose, built for speed"}
         title={"About"}
         text={text}
         textColor={"text-white"}
         withScrollTrigger={true}
       />
-      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/60">
+      <div className="flex flex-col items-center justify-between gap-16 px-10 pb-16 text-xl font-light tracking-wide lg:flex-row md:text-2xl lg:text-3xl text-white/70">
         <img
           ref={imgRef}
-          src="images/man.jpg"
-          alt="man"
+          src="images/image.png"
+          alt="mob-psycho"
           className="w-md rounded-3xl"
         />
         <AnimatedTextLines text={aboutText} className={"w-full"} />

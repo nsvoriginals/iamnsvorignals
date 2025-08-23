@@ -1,106 +1,107 @@
 // index.js
 export const servicesData = [
   {
-    title: "FullStack Development",
+    title: "FullStack Dev (End-to-End)",
     description:
-      "Your business deserves a fast, secure, and future-proof digital foundation. I develop custom web apps with clean architecture, optimized databases, and seamless integrations—ensuring reliability at every layer.",
+      "I love building stuff that actually works. From backend logic to shiny UIs, I put things together so they don’t just run — they scale. Think clean code, fast APIs, and frontends that feel buttery smooth.",
     items: [
       {
         title: "Backend Engineering",
-        description: "(REST/GraphQL APIs, Microservices, Auth Systems)",
+        description: "(Node.js, Express, REST/GraphQL, Auth, Microservices)",
       },
       {
-        title: "Frontend Excellence",
-        description: "(React, Vue, TypeScript, Interactive UI/UX)",
+        title: "Frontend Magic",
+        description: "(React, GSAP animations, TypeScript, Interactive UI/UX)",
       },
       {
-        title: "Database Design",
-        description: "(SQL/NoSQL Optimization, Scalable Structures)",
+        title: "Databases",
+        description: "(MongoDB, Postgres, NoSQL/SQL tuning, scalable schemas)",
       },
     ],
   },
   {
-    title: "DevOps & Cloud Solutions",
+    title: "DevOps & Cloud Stuff",
     description:
-      "Deploying software shouldn't be a gamble. I automate infrastructure, enforce security, and leverage cloud platforms (AWS/Azure) to keep your app running smoothly—24/7, at any scale.",
+      "I mess with infra so you don’t have to. I containerize, automate, and ship apps to the cloud without the drama. Zero-to-prod, fast.",
     items: [
       {
-        title: "CI/CD Pipelines",
-        description: "(GitHub Actions, Docker, Kubernetes)",
+        title: "CI/CD & Infra",
+        description: "(Docker, GitHub Actions, Kubernetes basics)",
       },
       {
-        title: "Server Management ",
-        description: "(Linux, Nginx, Load Balancing)",
+        title: "Servers & Scaling",
+        description: "(Linux, Nginx, Load balancing, Caching tricks)",
       },
       {
-        title: "Performance Tuning",
-        description: "(Caching, Compression, Lighthouse 90+ Scores)",
+        title: "Perf Tuning",
+        description: "(Compression, Lighthouse 90+ scores, smoother builds)",
       },
     ],
   },
   {
     title: "Security & Optimization",
     description:
-      "Slow or hacked apps destroy trust. I harden security (XSS/SQLI protection, OAuth) and optimize bottlenecks so your app stays fast, safe, and scalable as you grow.",
+      "I don’t like slow apps or security holes. I patch, audit, and tweak code until it’s fast, safe, and production-ready.",
     items: [
       {
-        title: "Code Audits",
-        description: "(Refactoring, Tech Debt Cleanup)",
+        title: "Code Reviews",
+        description: "(Refactor, clean up tech debt)",
       },
       {
-        title: "Pen Testing",
-        description: "(Vulnerability Assessments)",
+        title: "Pen Testing Basics",
+        description: "(SQLi/XSS checks, Auth hardening, OAuth2)",
       },
       {
-        title: "SEO Tech Stack",
-        description: "(SSR, Metadata, Structured Data)",
+        title: "SEO Tech",
+        description: "(SSR, metadata, structured data, better rankings)",
       },
     ],
   },
   {
-    title: "Web & Mobile Apps",
+    title: "Exploring New Tech",
     description:
-      "A clunky interface can sink even the best ideas. I craft responsive, pixel perfect web and mobile apps (React Native/Flutter) that users love—bridging design and functionality seamlessly.",
+      "I like to poke around new stacks and push boundaries — from crypto to systems programming. Right now I’m vibing with Rust, Solana, Web3 stuff, and Kubernetes.",
     items: [
       {
-        title: "Cross-Platform Apps",
-        description: "(Single codebase for iOS/Android/Web)",
+        title: "Rustacean Mode",
+        description: "(Learning Rust for systems + web backends)",
       },
       {
-        title: "PWAs",
-        description: "(Offline mode, Push Notifications)",
+        title: "Solana / Web3",
+        description: "(Smart contracts, dApps, wallets, blockchain infra)",
       },
       {
-        title: "E-Commerce",
-        description: "(Checkout flows, Payment Gateways, Inventory APIs)",
+        title: "Creative UI/UX",
+        description: "(GSAP motion design, React + animations that pop)",
       },
     ],
   },
 ];
+
 export const projects = [
   {
     id: 1,
-    name: "Mobile Accessories E-commerce",
+    name: "ATLAS AI",
     description:
-      "An online store specializing in phone accessories including cases, chargers, cables, and power banks with MagSafe compatibility.",
-    href: "",
-    image: "/assets/projects/mobile-accessories-store.jpg",
+      "An AI powered career development platform to help aspirants get job ready.",
+    href: "https://dash-one-henna.vercel.app/",
+    image: "/assets/projects/atlas.png",
     bgImage: "/assets/backgrounds/blanket.jpg",
     frameworks: [
       { id: 1, name: "React" },
-      { id: 2, name: "Next.js" },
+      { id: 2, name: "Framer" },
       { id: 3, name: "Node.js" },
-      { id: 4, name: "MongoDB" },
-      { id: 5, name: "Tailwind CSS" },
+      { id: 4, name: "GROQ" },
+      { id: 5, name: "FastAPI" },
     ],
   },
   {
     id: 2,
-    name: "Plant Shop E-commerce",
+    name: "STASH",
     description:
-      "An online store specializing in rare and decorative plants with a clean, user-friendly interface.",
-    href: "",
-    image: "/assets/projects/plant-shop.jpg",
+      "A web platform to organise all types of content without hassle.",
+    href: "https://github.com/nsvoriginals/stash.git",
+    image: "/assets/projects/image.png",
     bgImage: "/assets/backgrounds/curtains.jpg",
     frameworks: [
       { id: 1, name: "React" },
@@ -111,71 +112,40 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Apple Tech Marketplace",
+    name: "Interactive Virtual Meet",
     description:
-      "An e-commerce platform for Apple products and accessories with deals and category filtering.",
-    href: "",
-    image: "/assets/projects/apple-tech-store.jpg",
-    bgImage: "/assets/backgrounds/map.jpg",
-    frameworks: [
-      { id: 1, name: "Blazor" },
-      { id: 2, name: "ASP.NET Core" },
-      { id: 3, name: "SQL Server" },
-      { id: 4, name: "Bootstrap" },
-    ],
-  },
-  {
-    id: 4,
-    name: "Electronics & Gadgets Store",
-    description:
-      "A multi-category online shop featuring electronics, home appliances, and gaming gear with special offers.",
-    href: "",
-    image: "/assets/projects/electronics-store.jpg",
+      "A metaverse-style app for online meetings and hangouts. Built with realtime multiplayer vibes.",
+    href: "https://oasisclient.vercel.app/",
+    image: "/assets/projects/oasis.png",
     bgImage: "/assets/backgrounds/poster.jpg",
     frameworks: [
-      { id: 1, name: "Vue.js" },
-      { id: 2, name: "Laravel" },
-      { id: 3, name: "MySQL" },
-      { id: 4, name: "SCSS" },
-    ],
-  },
-  {
-    id: 5,
-    name: "Home Decor Marketplace",
-    description:
-      "A curated collection of designer home decor items, including furniture and artisan vases.",
-    href: "",
-    image: "/assets/projects/home-decor-store.jpg",
-    bgImage: "/assets/backgrounds/table.jpg",
-    frameworks: [
-      { id: 1, name: "Angular" },
-      { id: 2, name: "Firebase" },
-      { id: 3, name: "GraphQL" },
-      { id: 4, name: "Material UI" },
-    ],
-  },
-  {
-    id: 6,
-    name: "Digital Game Store",
-    description:
-      "A gaming platform featuring discounted titles, top sellers, and genre-based browsing.",
-    href: "",
-    image: "/assets/projects/game-store.jpg",
-    bgImage: "/assets/backgrounds/curtains.jpg",
-    frameworks: [
-      { id: 1, name: "Svelte" },
-      { id: 2, name: "Node.js" },
+      { id: 1, name: "React" },
+      { id: 2, name: "Express" },
       { id: 3, name: "MongoDB" },
-      { id: 4, name: "Chakra UI" },
+      { id: 4, name: "Colyseus + WebSockets" },
     ],
   },
+  // {
+  //   id: 4,
+  //   name: "Digital Game Store",
+  //   description:
+  //     "A gaming platform with discounted titles, top sellers, and genre-based browsing.",
+  //   href: "",
+  //   image: "/assets/projects/game-store.jpg",
+  //   bgImage: "/assets/backgrounds/curtains.jpg",
+  //   frameworks: [
+  //     { id: 1, name: "Svelte" },
+  //     { id: 2, name: "Node.js" },
+  //     { id: 3, name: "MongoDB" },
+  //     { id: 4, name: "Chakra UI" },
+  //   ],
+  // },
 ];
+
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/ali.sanatidev/reels/" },
-  {
-    name: "Youtube",
-    href: "https://www.youtube.com/channel/UCZhtUWTtk3bGJiMPN9T4HWA",
-  },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/ali-sanati/" },
-  { name: "GitHub", href: "https://github.com/Ali-Sanati" },
+  { name: "Instagram", href: "https://www.instagram.com/nsvoriginals/" },
+  { name: "Twitter", href: "https://x.com/SheshiVardhan34" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/sheshivardhan34/" },
+  { name: "GitHub", href: "https://github.com/nsvoriginals" },
+  { name: "Medium", href: "https://medium.com/@nsvoriginals" },
 ];
