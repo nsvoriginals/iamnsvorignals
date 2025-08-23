@@ -1,7 +1,7 @@
 // index.js
 export const servicesData = [
   {
-    title: "FullStack Dev (End-to-End)",
+    title: "FullStack Developer",
     description:
       "I love building stuff that actually works. From backend logic to shiny UIs, I put things together so they don’t just run — they scale. Think clean code, fast APIs, and frontends that feel buttery smooth.",
     items: [
