@@ -1,125 +1,79 @@
-var tl = gsap.timeline();
+(() => {
+  const root = document.documentElement;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-tl.from("#four",{
-    opacity:0,
-    y: 10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.to("#four",{
-    opacity:0,
-    y: -10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.from("#three",{
-    opacity:0,
-    y: 10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.to("#three",{
-    opacity:0,
-    y: -10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.from("#two",{
-    opacity:0,
-    y: 10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.to("#two",{
-    opacity:0,
-    y: -10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.from("#one",{
-    opacity:0,
-    y: 10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.to("#one",{
-    opacity:0,
-    y: -10,
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.to("#black",{
-    y: "-100%",
-    duration:1,
-    ease: "Expo.easeInOut"
-})
-.from("#nav",{
-    y: "-10%",
-    opacity:0,
-    duration:1,
-    delay:0,
-    ease: "Expo.easeInOut"
-}, )
-.from("#navmain",{
-    y: "-10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
-.from("#creativeimg",{
-    y: "10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
-.from("#arrowimg",{
-    y: "10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
-.from("#small-des",{
-    y: "10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
-.from("#what",{
-    y: "10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
-.from("#button",{
-    y: "10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
-.from("#follow",{
-    y: "10%",
-    opacity:0,
-    delay: 0,
-    duration:1,
-    ease: "Expo.easeInOut"
-}, )
+  if (reduce || !window.gsap) { root.classList.remove('js'); return; }
 
-$('#firsth2 h1').textillate({initialDelay: 5300, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
-$('#firsth1 h1').textillate({initialDelay: 5300, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
-$('#chaniru').textillate({initialDelay: 5600, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
-$('#number').textillate({initialDelay: 5600, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
-$('#about').textillate({initialDelay: 5600, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
-$('#number-2').textillate({initialDelay: 5600, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
-$('#description').textillate({initialDelay: 5600, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
+  // One orchestrated moment: the sketch appears, then the text lands.
+  gsap.timeline({ defaults: { ease: 'power2.out' } })
+    .fromTo('#glasses', { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.9 })
+    .fromTo('.reveal', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.08 }, '-=0.5')
+    .to('.bar', { opacity: 1, duration: 0.8 }, '-=0.6');
 
-// $('.xt h1').textillate({initialDelay: 1500, in: { effect: 'fadeInUp',delayScale:1, delay: 40 } });
+  // Continuous ripple: always animating while hovering, independent of mouse movement
+  const art = document.getElementById('art');
+  const face = document.querySelector('.face');
+  const disp = document.querySelector('#ripple feDisplacementMap');
+  const turb = document.querySelector('#ripple feTurbulence');
+  let rafId = null;
+  let hovering = false;
+  let time = 0;
+  let intensity = 0;
 
+  const tick = () => {
+    time += 1/60;
 
+    // Smooth intensity ramp
+    intensity += (hovering ? 1 : -1) * 0.02;
+    intensity = Math.max(0, Math.min(1, intensity));
 
+    if (!hovering && intensity <= 0.001) {
+      art.removeAttribute('filter');
+      cancelAnimationFrame(rafId);
+      rafId = null;
+      return;
+    }
 
+    // Continuous organic animation - no mouse dependency
+    const baseFreq = 0.003 + 0.004 * intensity;
+    const freqX = baseFreq * (0.9 + Math.sin(time * 0.15) * 0.1);
+    const freqY = baseFreq * (0.9 + Math.cos(time * 0.12) * 0.1);
+
+    // Smooth multi-wave scale
+    const wave =
+      Math.sin(time * 0.8) * 0.4 +
+      Math.sin(time * 1.1 + 0.7) * 0.25 +
+      Math.sin(time * 0.5 + 2.1) * 0.15;
+    const scale = intensity * 16 * (1 + wave);
+
+    // Slow seed rotation
+    const seed = 7 + Math.sin(time * 0.06) * 5;
+
+    disp.setAttribute('scale', scale);
+    turb.setAttribute('baseFrequency', `${freqX} ${freqY}`);
+    turb.setAttribute('seed', Math.round(seed));
+
+    rafId = requestAnimationFrame(tick);
+  };
+
+  face.addEventListener('pointerenter', () => {
+    hovering = true;
+    art.setAttribute('filter', 'url(#ripple)');
+    if (!rafId) tick();
+  });
+
+  face.addEventListener('pointerleave', () => {
+    hovering = false;
+  });
+
+  face.addEventListener('click', () => {
+    gsap.to({ v: 0.005 }, {
+      v: 0.018, duration: 0.1, ease: 'power2.out',
+      yoyo: true, repeat: 1,
+      onUpdate: function() {
+        const v = this.targets()[0].v;
+        turb.setAttribute('baseFrequency', `${v} ${v * 1.4}`);
+      }
+    });
+  });
+})();

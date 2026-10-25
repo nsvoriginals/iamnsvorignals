@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/fav.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Chaniru Sethum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vardhan — Systems Engineer</title>
+  <meta name="description" content="Vardhan, systems engineer. [REPLACE: one-line description]">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-    <div id="black">
-        <h1 id="chaniru-start">CHANIRU SETHUM <br> PORTFOLIO &copy;2022 <br> Sri Lanka </h1>
-        <div id="rightscroll">
-            <h1 id="one">100</h1>
-            <h1 id="two">90</h1>
-            <h1 id="three">22</h1>
-            <h1 id="four">0</h1>
-        </div>
-    </div>
-    <div id="nav">
-        <h1>CHANIRU SETHUM</h1>
-        <a href="#">Work &nbsp;&nbsp;</a> 	
-        <a href="#">Contact &nbsp;&nbsp;</a>
-        <a href="#">About</a>
-    </div>
-    <div id="main">
-        <div id="navmain">
-            <h1>Frontend developer <br>
-                Web designer
-            </h1>
-            <h1>Based in Colombo <br>
-                Sri Lanka
-            </h1>
-        </div>
-        <div id="creative">
-            <div id="cone">
-                <div id="firsth1">
-                    <h1>WEB</h1>
-                </div>
-                <div id="firsth2">
-                    <h1>DEVELOPER</h1>
-                </div>
-            </div>
-            <div id="creativeimg"></div>
-            <p id="small-des">
-            I Support designers <br>
-            and agencies with <br>
-            creative developemt
-            </p>
-            <h1 id="chaniru">Chaniru
-            sethum
-            </h1>
-            <div id="arrowimg"></div>
-        </div>
-    </div>
-    <div id="main-2">
+  <!-- Full-screen SVG background -->
+  <figure class="bg-face" aria-hidden="true">
+    <svg viewBox="420 0 1210 1144" role="img" focusable="false">
+      <defs>
+        <filter id="ripple" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+          <feTurbulence type="turbulence" baseFrequency="0.008 0.008" numOctaves="3" seed="7" result="noise" stitchTiles="stitch"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+      <g id="art">
+<g id="sketch" fill="currentColor" fill-rule="evenodd">
+<path class="ink" d="M683.0,1143.2C683.0,1142.7 683.9,1141.5 685.0,1140.5C686.1,1139.5 687.0,1137.9 687.0,1137.0C687.0,1136.1 688.6,1133.7 690.5,1131.7C692.5,1129.7 694.3,1126.7 694.6,1125.0C695.0,1123.4 695.6,1122.3 696.1,1122.6C696.6,1122.9 698.3,1120.5 699.9,1117.3C701.4,1114.1 705.6,1106.5 709.0,1100.5C738.3,1049.2 743.7,1036.1 754.1,991.0C757.3,977.1 757.8,974.1 758.6,963.0C759.2,954.3 759.7,953.1 761.5,955.7C763.4,958.4 766.8,957.6 768.2,954.1C771.7,945.5 770.7,939.4 764.6,931.9C763.5,930.4 761.7,928.0 760.8,926.4C757.7,921.1 737.2,890.6 733.6,885.9C728.9,879.7 727.7,876.5 731.9,881.2C733.7,883.3 735.8,885.0 736.4,885.0C737.1,885.0 738.5,886.7 739.6,888.7C740.6,890.7 742.1,892.5 742.8,892.8C745.1,893.5 744.0,889.2 740.0,881.8C736.4,875.2 729.7,861.6 720.5,842.5C718.7,838.6 716.9,834.5 716.5,833.3C715.9,831.1 708.9,816.9 707.0,814.0C702.1,806.4 693.0,789.1 693.0,787.3C693.0,786.0 690.7,778.2 687.9,769.8C684.8,760.4 683.1,753.7 683.5,752.3C683.8,751.1 683.3,748.3 682.4,746.3C681.6,744.2 680.5,740.5 680.0,738.0C679.5,735.5 678.0,729.6 676.7,724.7C675.2,719.5 674.6,715.7 675.2,715.4C675.7,715.0 675.9,712.9 675.6,710.6C675.3,708.4 675.1,706.1 675.1,705.6C675.0,705.2 674.3,705.1 673.5,705.4C672.5,705.7 671.7,705.3 671.3,704.3C670.9,703.4 671.2,702.4 671.8,702.2C673.5,701.7 673.3,697.0 671.5,696.4C670.6,696.0 670.3,694.9 670.6,693.2C670.9,691.7 670.6,687.8 670.0,684.5C669.4,681.2 668.5,675.8 668.1,672.5C667.7,669.1 666.8,665.5 666.2,664.3C665.5,663.1 665.0,661.1 665.0,659.8C665.0,658.5 664.3,656.6 663.5,655.6C662.7,654.5 662.0,652.8 662.0,651.8C662.0,650.7 661.1,648.0 659.9,645.7C658.8,643.4 657.7,639.2 657.4,636.5C657.1,633.8 656.5,630.6 656.0,629.5C654.2,625.3 653.1,620.3 652.5,613.5C651.8,606.6 651.5,605.2 647.9,594.0C646.9,591.0 645.9,585.6 645.6,582.1C645.3,578.6 644.5,575.1 643.9,574.4C642.8,573.0 641.8,569.8 639.6,560.0L638.4,554.5L634.0,554.5C631.5,554.5 628.9,554.1 628.1,553.6C625.6,552.0 607.7,551.7 571.2,552.6C552.7,553.1 544.0,552.9 544.0,552.2C544.0,551.... (truncated for brevity - keep your full SVG paths here)
+</g>
+<g id="glasses" fill="currentColor" fill-rule="evenodd">
+<path d="M794.5,688.9C751.0,686.8 714.9,677.8 703.1,665.9C696.5,659.3 688.0,637.3 680.1,606.0C677.9,597.5 675.2,587.1 674.0,583.0C672.9,578.9 670.8,571.2 669.5,566.0C666.0,553.0 660.9,542.5 657.1,540.5C653.2,538.5 652.7,538.6 653.3,541.0C653.9,543.2 652.6,543.5 648.6,542.0C644.9,540.6 642.5,537.9 642.2,534.5C641.7,530.6 640.5,529.4 638.7,530.9C637.0,532.2 636.0,529.8 636.0,524.4C636.0,521.9 636.4,521.4 638.2,521.4C639.9,521.5 640.5,520.9 640.5,519.5C640.5,518.1 639.9,517.6 638.8,517.8C636.3,518.2 636.5,516.4 639.0,515.7C642.2,514.9 641.2,505.0 637.7,502.8C636.8,502.2 636.8,502.0 637.7,502.0C638.6,502.0 638.8,500.0 638.6,495.0C638.2,488.3 638.3,487.9 641.1,485.6C645.2,482.1 648.1,481.4 649.2,483.4C650.3,485.3 655.3,484.8 658.0,482.5C658.8,481.9 660.3,481.0 661.3,480.7C662.3,480.3 663.0,479.3 662.8,478.4C662.6,477.5 663.0,476.5 663.7,476.3C664.3,476.1 665.0,476.7 665.2,477.7C665.6,479.8 676.9,479.8 691.5,477.5C696.5,476.7 702.8,475.9 705.5,475.5C708.2,475.2 716.1,474.0 723.0,473.0C744.9,469.6 827.9,468.3 863.0,470.8C922.3,475.0 940.6,477.8 957.7,484.9C982.1,495.0 988.0,497.3 993.8,498.6C1001.1,500.3 1003.0,500.0 1003.0,497.0C1003.0,494.9 1003.9,494.6 1008.9,495.6C1011.0,496.0 1011.9,496.7 1011.6,497.6C1008.6,505.4 1039.6,502.8 1062.9,493.3C1093.1,481.1 1110.5,477.1 1147.5,474.0C1154.1,473.4 1166.9,472.2 1176.0,471.2C1195.6,469.2 1277.9,469.0 1296.0,470.9C1301.8,471.6 1313.9,472.8 1322.9,473.6C1331.9,474.4 1345.4,476.2 1352.9,477.6C1373.3,481.4 1376.6,481.6 1378.0,479.1C1380.1,475.0 1390.1,477.9 1389.3,482.3C1388.9,484.4 1389.4,485.1 1391.8,486.4C1394.6,487.9 1394.9,487.8 1395.2,486.2C1395.5,484.8 1395.9,485.0 1397.4,487.3C1399.0,489.7 1399.1,490.7 1398.2,493.8C1397.6,495.8 1396.6,504.3 1396.0,512.6C1394.7,532.0 1392.8,541.8 1389.7,544.5C1388.4,545.6 1386.6,548.6 1385.6,551.1C1383.5,556.9 1380.0,560.6 1380.0,557.1C1380.0,553.4 1377.6,555.3 1375.9,560.3C1375.1,562.9 1374.0,565.3 1373.7,565.7C1372.0,567.4 1373.0,571.1 1375.0,570.5C1377.7,569.7 1377.7,575.5 1375.1,582.0C1... (truncated - keep your full glasses path)
+</g>
+      </g>
+    </svg>
+  </figure>
 
-        <h1 id="follow">@chaniru.lk
-            instagram
-    </div>
+  <header class="bar">
+    <nav aria-label="Left">
+      <a href="[REPLACE: newsletter URL]">newsletter</a>
+    </nav>
+    <nav aria-label="Primary">
+      <a href="[REPLACE: LinkedIn or contact URL]">let's connect</a>
+      <a href="mailto:[REPLACE: email@example.com]">talk to me</a>
+    </nav>
+  </header>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js" integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js" integrity="sha512-0bHMhYsdpiur1bT84kDH4D7cpxFQ9O7uA5yxVAqWC87h552Xt0swX4M+ZlXMKE8oPVRIJ5lAwXWO2UWeDwJJOw==" crossorigin="anonymous"referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="script.js"></script>
+  <main class="page">
+    <section class="info">
+      <h1 class="name reveal">i'm vardhan</h1>
+      <dl class="rows">
+        <div class="row reveal">
+          <dt>who/</dt>
+          <dd><span class="mono">[REPLACE: coordinates]</span>, [REPLACE: m], [REPLACE: country]</dd>
+        </div>
+        <div class="row reveal">
+          <dt>about/</dt>
+          <dd>[REPLACE: one specific line, e.g. building systems that stay up, debugging in production, deleting code.]</dd>
+        </div>
+        <div class="row reveal">
+          <dt>actively learning/</dt>
+          <dd>[REPLACE: rust, distributed systems, compilers, webrtc]</dd>
+        </div>
+        <div class="row reveal">
+          <dt>work/</dt>
+          <dd>built <a href="[REPLACE: project URL]">[REPLACE: project]</a> <a href="[REPLACE: all work URL]">+[N] more</a></dd>
+        </div>
+        <div class="row reveal">
+          <dt>writing/</dt>
+          <dd><a href="[REPLACE: personal writing URL]">personal</a>, <a href="[REPLACE: blog URL]">blogs</a></dd>
+        </div>
+        <div class="row reveal">
+          <dt>links/</dt>
+          <dd>
+            <a href="[REPLACE: X URL]">x</a>, <a href="[REPLACE: GitHub URL]">github</a>, <a href="mailto:[REPLACE: email@example.com]">email</a>, <a href="[REPLACE: LinkedIn URL]">linkedin</a>, <a href="[REPLACE: CV URL]">cv</a>
+          </dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
