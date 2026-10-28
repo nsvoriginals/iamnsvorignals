@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MetaTrader — Sheshivardhan</title>
+<meta name="description" content="MetaTrader is a React 19 market terminal: Binance WebSocket price feeds, lightweight candlestick charts, trader leaderboards and profile analytics.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Playfair+Display:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="/assets/favicon_io/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+<link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+<meta name="theme-color" content="#1a1816">
+</head>
+<body data-page="projects/metatrader">
+<a class="skip" href="#main">Skip to content</a>
+<nav>
+<a href="/" data-nav="home">pond</a><a href="/projects" data-nav="projects">projects</a><a href="/gallery" data-nav="gallery">gallery</a><a href="/blog" data-nav="blog">blog</a>
+<button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M13.5 9.7A5.6 5.6 0 0 1 6.3 2.5a5.5 5.5 0 1 0 7.2 7.2Z"/></svg></button>
+</nav>
+<header class="mbar"><a href="/" class="mname">Sheshivardhan</a><button class="mbtn" aria-label="Open menu" aria-expanded="false"><svg class="i-dots" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><circle cx="3.5" cy="3.5" r="1.3"/><circle cx="10.5" cy="3.5" r="1.3"/><circle cx="3.5" cy="10.5" r="1.3"/><circle cx="10.5" cy="10.5" r="1.3"/></svg><svg class="i-x" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12"/></svg></button></header>
+<div class="menu" aria-hidden="true"><div class="mlinks"><a href="/" data-nav="home">Home</a><a href="/projects" data-nav="projects">Projects</a><a href="/gallery" data-nav="gallery">Gallery</a><a href="/blog" data-nav="blog">Blog</a></div>
+<div class="mfoot"><a href="https://www.linkedin.com/in/sheshivardhan34/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><a href="https://github.com/nsvoriginals" target="_blank" rel="noopener">GitHub <span>↗</span></a><button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M13.5 9.7A5.6 5.6 0 0 1 6.3 2.5a5.5 5.5 0 1 0 7.2 7.2Z"/></svg></button></div></div>
+<canvas id="pond" style="display:none;opacity:0" aria-hidden="true"></canvas>
+<main id="main">
+<div class="hero"><div style="background:linear-gradient(135deg,#0b1114 0%,#16262b 52%,#5ec8e0)"><img src="/assets/img/metatrader/hero.png" alt="MetaTrader live market terminal" onerror="this.remove()"></div></div>
+<div class="wrap detail">
+<a class="back" href="/projects">← Projects</a>
+<h1 data-in>MetaTrader</h1>
+<p class="sub" data-in>Live markets, charts and a trader leaderboard.</p>
+<p class="lede" data-in>MetaTrader is a React market terminal rather than an exchange. It streams crypto prices from Binance over WebSocket, draws candles with lightweight-charts, and wraps the data in a full product: a live market board, a charting detail view, top-performer leaderboards, trader profiles with balance and PnL history, and a dark/light theme. It runs live on Vercel.</p>
+<p class="ext" data-in><a class="u" href="https://metatrader-client-mniw.vercel.app" target="_blank" rel="noopener">metatrader-client-mniw.vercel.app ↗</a> <span aria-hidden="true">/</span> <a class="u" href="https://github.com/nsvoriginals/metatrader-client" target="_blank" rel="noopener">github.com/nsvoriginals/metatrader-client ↗</a></p>
+
+<dl class="facts" data-in>
+<div><dt>Role</dt><dd>Frontend, data layer and UX</dd></div>
+<div><dt>Stack</dt><dd>React 19 · Vite · Tailwind</dd></div>
+<div><dt>Data</dt><dd>Binance WebSocket · TanStack Query</dd></div>
+<div><dt>Year</dt><dd>2026 · live on Vercel</dd></div>
+</dl>
+<ul class="chips" data-in>
+<li>React 19</li><li>Vite</li><li>Tailwind</li><li>React Router 7</li><li>TanStack Query</li><li>lightweight-charts</li><li>Recharts</li><li>Axios</li><li>Binance WS</li><li>lucide-react</li><li>Vercel</li>
+</ul>
+
+<h2 data-in>Different from CEX</h2>
+<p data-in>CEX is the venue: it owns the order book and decides what matches. MetaTrader is the client side of that experience: it consumes a public market feed, keeps it on screen, and gives a trader the context to act. That difference shaped the build — there is no matching logic here, only streaming ingestion, derived chart data, and a lot of attention to loading, empty and error states.</p>
+
+<h2 data-in>The live market</h2>
+<p data-in>The market page opens one combined Binance stream for twelve pairs and folds every update into a single ticker map. Each <span class="mono">MarketCard</span> gets its ticker as a prop and renders price, 24h change, volume and the high/low range. The detail page switches to a single-symbol client: <span class="mono">useKlines</span> seeds a hundred historical one-minute candles and then appends live updates, <span class="mono">useAggTrades</span> counts buy and sell flow, and <span class="mono">useTicker</span> drives the price header.</p>
+<ul data-in>
+<li><b>One connection per view.</b> A combined multi-stream socket for the board, a single-symbol client for the chart.</li>
+<li><b>Server state is not component state.</b> TanStack Query handles fetching, caching and refetching for the REST-backed screens.</li>
+<li><b>Honest loading states.</b> Skeletons and empty states are part of the page, not an afterthought.</li>
+<li><b>Responsive by default.</b> The board and chart reflow from desktop to phone without a separate mobile build.</li>
+</ul>
+
+<h2 data-in>Charts and stats</h2>
+<p data-in>Opening a symbol goes to <span class="mono">/trade/:symbol</span>, where the page composes the candlestick chart with a header, live stats and the order context around it. The chart is drawn with TradingView's lightweight-charts so it stays smooth while the feed updates; Recharts covers the smaller breakdown and portfolio visuals where a full financial chart would be overkill.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#0b1114 0%,#163039 55%,#5ec8e0)">drop live.png here · /assets/img/metatrader/live.png</div><img src="/assets/img/metatrader/live.png" alt="MetaTrader live market board" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Live market.</b> Streaming prices and sparklines across the board, fed by one WebSocket.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#101418 0%,#1d2a33 55%,#e3b45f)">drop performers.png here · /assets/img/metatrader/performers.png</div><img src="/assets/img/metatrader/performers.png" alt="MetaTrader top performers leaderboard" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Performers.</b> Leaderboards, stat cards and a top-champions rail built from the trader API.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#101418 0%,#232c35 55%,#e07a4f)">drop profile.png here · /assets/img/metatrader/profile.png</div><img src="/assets/img/metatrader/profile.png" alt="MetaTrader trader profile with balance and PnL" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Trader profile.</b> Balance, PnL, stats and the trade history table in one view.</p>
+
+<h2 data-in>Performers and profiles</h2>
+<p data-in>The social half of the product is built from the same primitives as the market half. <span class="mono">PerformersHero</span>, <span class="mono">PerformersGrid</span>, <span class="mono">PerformerCard</span> and <span class="mono">TopChampions</span> compose a leaderboard from <span class="mono">useTopPerformers</span>; the profile page combines <span class="mono">BalanceCard</span>, <span class="mono">PnLCard</span>, <span class="mono">StatsCard</span> and <span class="mono">TradeRow</span> behind <span class="mono">useProfile</span> and <span class="mono">useOrder</span>. Every screen has a skeleton path, so a slow network never leaves a blank panel.</p>
+<ul data-in>
+<li><b>Composable cards.</b> Small presentational components, one hook per data source.</li>
+<li><b>Router-driven state.</b> Symbols and pages live in the URL, so links and refreshes land in the right place.</li>
+<li><b>Theme aware.</b> A <span class="mono">ThemeContext</span> toggles Tailwind's dark class across charts, cards and tables.</li>
+<li><b>Deployed like a product.</b> Vite build with SPA routing on Vercel, not a local demo.</li>
+</ul>
+
+<div class="pn"><div>previous<a href="/projects/cex">← CEX</a></div><div>next<a href="/projects/oasis">OASIS →</a></div></div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="/assets/js/pond.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

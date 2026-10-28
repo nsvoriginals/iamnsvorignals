@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CEX — Sheshivardhan</title>
+<meta name="description" content="CEX is a centralised spot exchange built in Rust: a price-time priority matching engine, Axum REST and WebSocket API, Postgres persistence and a browser trading terminal.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Playfair+Display:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="/assets/favicon_io/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+<link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+<meta name="theme-color" content="#1a1816">
+</head>
+<body data-page="projects/cex">
+<a class="skip" href="#main">Skip to content</a>
+<nav>
+<a href="/" data-nav="home">pond</a><a href="/projects" data-nav="projects">projects</a><a href="/gallery" data-nav="gallery">gallery</a><a href="/blog" data-nav="blog">blog</a>
+<button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M13.5 9.7A5.6 5.6 0 0 1 6.3 2.5a5.5 5.5 0 1 0 7.2 7.2Z"/></svg></button>
+</nav>
+<header class="mbar"><a href="/" class="mname">Sheshivardhan</a><button class="mbtn" aria-label="Open menu" aria-expanded="false"><svg class="i-dots" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><circle cx="3.5" cy="3.5" r="1.3"/><circle cx="10.5" cy="3.5" r="1.3"/><circle cx="3.5" cy="10.5" r="1.3"/><circle cx="10.5" cy="10.5" r="1.3"/></svg><svg class="i-x" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12"/></svg></button></header>
+<div class="menu" aria-hidden="true"><div class="mlinks"><a href="/" data-nav="home">Home</a><a href="/projects" data-nav="projects">Projects</a><a href="/gallery" data-nav="gallery">Gallery</a><a href="/blog" data-nav="blog">Blog</a></div>
+<div class="mfoot"><a href="https://www.linkedin.com/in/sheshivardhan34/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><a href="https://github.com/nsvoriginals" target="_blank" rel="noopener">GitHub <span>↗</span></a><button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M13.5 9.7A5.6 5.6 0 0 1 6.3 2.5a5.5 5.5 0 1 0 7.2 7.2Z"/></svg></button></div></div>
+<canvas id="pond" style="display:none;opacity:0" aria-hidden="true"></canvas>
+<main id="main">
+<div class="hero"><div style="background:linear-gradient(135deg,#0d1117 0%,#1c2733 52%,#62d0a0)"><img src="/assets/img/cex/hero.png" alt="CEX trading terminal" onerror="this.remove()"></div></div>
+<div class="wrap detail">
+<a class="back" href="/projects">← Projects</a>
+<h1 data-in>CEX</h1>
+<p class="sub" data-in>A centralised exchange, matched in Rust.</p>
+<p class="lede" data-in>CEX is a spot trading exchange built end to end: a Rust matching engine with price-time priority, an Axum REST and WebSocket API, Postgres persistence with JWT authentication, and a browser trading terminal with a live order book, tape and candlestick chart. Orders live in memory, fills are emitted as events, and the whole path is benchmarked.</p>
+<p class="ext" data-in><a class="u" href="https://github.com/nsvoriginals/cex" target="_blank" rel="noopener">github.com/nsvoriginals/cex ↗</a></p>
+
+<dl class="facts" data-in>
+<div><dt>Role</dt><dd>Matching engine, API and terminal</dd></div>
+<div><dt>Stack</dt><dd>Rust · Tokio · Axum · SQLx</dd></div>
+<div><dt>Data</dt><dd>Postgres · WebSocket event stream</dd></div>
+<div><dt>Year</dt><dd>2026 · source available</dd></div>
+</dl>
+<ul class="chips" data-in>
+<li>Rust</li><li>Tokio</li><li>Axum</li><li>SQLx</li><li>Postgres</li><li>WebSockets</li><li>JWT</li><li>Argon2</li><li>Criterion</li><li>Docker</li><li>Chart.js</li><li>Vanilla JS</li>
+</ul>
+
+<h2 data-in>The matching engine</h2>
+<p data-in>The engine is the centre of the system. Orders are stored in two sorted sides of the book, and incoming orders match by <b>price first, then time</b>. Every fill produces an execution report, updates both orders and removes filled levels. Five order types — market, limit, IOC, FOK and post-only — share the same matcher, so the API layer never has to reason about book state directly.</p>
+<ul data-in>
+<li><b>Price-time priority.</b> Better price wins; at the same price the older order is filled first.</li>
+<li><b>Five order types.</b> Market and limit orders walk the book; IOC and FOK decide what happens to the remainder, and post-only orders are rejected if they would cross.</li>
+<li><b>Evented results.</b> Trades, fills and book changes are emitted as events for the API and the WebSocket stream.</li>
+<li><b>Measured, not guessed.</b> The matcher has a Criterion benchmark so regressions show up as numbers.</li>
+</ul>
+
+<h2 data-in>The API and persistence</h2>
+<p data-in>Axum exposes the exchange over REST and WebSockets. Registration and login use Argon2 password hashes and JWT sessions; authenticated handlers place and cancel orders, while public handlers serve markets, tickers, the book and recent trades. SQLx talks to Postgres with compile-time-checked queries and migrations, and the service ships with a Dockerfile and environment-based config so the same binary runs locally and in a container.</p>
+<ul data-in>
+<li><b>REST.</b> Auth, orders, balances, markets and trade history split across focused handler modules.</li>
+<li><b>WebSocket.</b> A single connection streams book deltas, trades and tickers to the terminal.</li>
+<li><b>Storage.</b> Postgres through SQLx with migrations, typed DTOs and an explicit error layer.</li>
+<li><b>Operations.</b> <span class="mono">.env.example</span>, Docker image and a built-in simulator that quotes and cancels orders so the book is never empty.</li>
+</ul>
+
+<h2 data-in>The terminal</h2>
+<p data-in>An exchange is only as good as the screen traders actually use. The front end is deliberately dependency-light: plain ES modules, a shared API/WebSocket client, and Chart.js for candles. It keeps the order book, tape and ticker in sync from one socket, lets you switch symbols and timeframes without a reload, and puts the order ticket next to the depth book so price, size and spread are always in view.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#0e1319 0%,#1f2b36 55%,#59c79a)">drop terminal.png here · /assets/img/cex/terminal.png</div><img src="/assets/img/cex/terminal.png" alt="CEX trading terminal with order book and chart" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>The terminal.</b> Symbol, depth, tape, candles and the order ticket on one screen.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#11151b 0%,#26313c 55%,#d8b25a)">drop orderbook.png here · /assets/img/cex/orderbook.png</div><img src="/assets/img/cex/orderbook.png" alt="CEX live order book" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Live depth.</b> Bids and asks update from the WebSocket stream, with spread and last price in the header.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#101418 0%,#232c35 55%,#e07a4f)">drop auth.png here · /assets/img/cex/auth.png</div><img src="/assets/img/cex/auth.png" alt="CEX sign-in screen" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Sessions.</b> Argon2-hashed passwords, JWT sessions and a terminal that refuses to render without a valid token.</p>
+
+<h2 data-in>What I focused on</h2>
+<ul data-in>
+<li><b>Correctness before features.</b> One book per symbol, explicit order status transitions, and a small deterministic matcher that is easy to reason about.</li>
+<li><b>One source of truth.</b> The engine owns order state; the API and WebSocket layers only translate events.</li>
+<li><b>Fast feedback.</b> Benchmarks and a simulation mode make it possible to iterate on the book without a real market.</li>
+<li><b>A terminal that stays honest.</b> Every number on screen comes from the same socket that drives the book.</li>
+</ul>
+
+<div class="pn"><div>previous<a href="/projects/oasis">← OASIS</a></div><div>next<a href="/projects/metatrader">MetaTrader →</a></div></div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="/assets/js/pond.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

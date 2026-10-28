@@ -1,0 +1,1 @@
+hey there i am working on this project as my portfolio you can look at the files and understand what each file is trying to do get the context of the project and then also i have few concerns the light mode is not working on big screens for the projects i have few projects we have replace those kairos selfserve and three-stones with my projects my projects names are oasis 

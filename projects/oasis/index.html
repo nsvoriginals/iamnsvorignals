@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OASIS — Sheshivardhan</title>
+<meta name="description" content="OASIS is a browser-based virtual office built with React, Phaser 3, TypeScript, Colyseus and WebRTC — walk a floor, talk by proximity, share a screen.">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Playfair+Display:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="/assets/favicon_io/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon_io/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon_io/apple-touch-icon.png">
+<link rel="manifest" href="/assets/favicon_io/site.webmanifest">
+<meta name="theme-color" content="#1a1816">
+</head>
+<body data-page="projects/oasis">
+<a class="skip" href="#main">Skip to content</a>
+<nav>
+<a href="/" data-nav="home">pond</a><a href="/projects" data-nav="projects">projects</a><a href="/gallery" data-nav="gallery">gallery</a><a href="/blog" data-nav="blog">blog</a>
+<button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M13.5 9.7A5.6 5.6 0 0 1 6.3 2.5a5.5 5.5 0 1 0 7.2 7.2Z"/></svg></button>
+</nav>
+<header class="mbar"><a href="/" class="mname">Sheshivardhan</a><button class="mbtn" aria-label="Open menu" aria-expanded="false"><svg class="i-dots" width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><circle cx="3.5" cy="3.5" r="1.3"/><circle cx="10.5" cy="3.5" r="1.3"/><circle cx="3.5" cy="10.5" r="1.3"/><circle cx="10.5" cy="10.5" r="1.3"/></svg><svg class="i-x" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 2l10 10M12 2 2 12"/></svg></button></header>
+<div class="menu" aria-hidden="true"><div class="mlinks"><a href="/" data-nav="home">Home</a><a href="/projects" data-nav="projects">Projects</a><a href="/gallery" data-nav="gallery">Gallery</a><a href="/blog" data-nav="blog">Blog</a></div>
+<div class="mfoot"><a href="https://www.linkedin.com/in/sheshivardhan34/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><a href="https://github.com/nsvoriginals" target="_blank" rel="noopener">GitHub <span>↗</span></a><button class="theme" type="button" aria-label="Switch to light theme" aria-pressed="false"><svg class="i-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="i-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M13.5 9.7A5.6 5.6 0 0 1 6.3 2.5a5.5 5.5 0 1 0 7.2 7.2Z"/></svg></button></div></div>
+<canvas id="pond" style="display:none;opacity:0" aria-hidden="true"></canvas>
+<main id="main">
+<div class="hero"><div style="background:linear-gradient(135deg,#0f1613 0%,#28443a 52%,#b9d46c)"><img src="/assets/img/oasis/hero.png" alt="OASIS landing page" onerror="this.remove()"></div></div>
+<div class="wrap detail">
+<a class="back" href="/projects">← Projects</a>
+<h1 data-in>OASIS</h1>
+<p class="sub" data-in>A virtual office you can actually walk through.</p>
+<p class="lede" data-in>OASIS turns a video call into a place. It is a browser-based virtual office: a walkable floor, proximity voice and video that starts when you are close, room chat, screen sharing and whiteboards, and public or password-protected rooms. No account, no install — pick a name, choose an avatar and walk in.</p>
+<p class="ext" data-in><a class="u" href="https://oasisclient.vercel.app" target="_blank" rel="noopener">oasisclient.vercel.app ↗</a> <span aria-hidden="true">/</span> <a class="u" href="https://github.com/nsvoriginals/oasisclient" target="_blank" rel="noopener">github.com/nsvoriginals/oasisclient ↗</a></p>
+
+<dl class="facts" data-in>
+<div><dt>Role</dt><dd>Design, frontend and realtime systems</dd></div>
+<div><dt>Stack</dt><dd>React 18 · Phaser 3 · TypeScript</dd></div>
+<div><dt>Realtime</dt><dd>Colyseus (WebSocket) · PeerJS / WebRTC</dd></div>
+<div><dt>Year</dt><dd>2026 · active development</dd></div>
+</dl>
+<ul class="chips" data-in>
+<li>React 18</li><li>TypeScript</li><li>Vite</li><li>Phaser 3</li><li>Tiled maps</li><li>Colyseus</li><li>PeerJS</li><li>WebRTC</li><li>Redux Toolkit</li><li>Tailwind</li><li>MUI</li><li>styled-components</li>
+</ul>
+
+<h2 data-in>Why a floor instead of a grid</h2>
+<p data-in>Video calls flattened the office into a grid of faces. OASIS gives it floors, rooms and people again. A real floor plan means movement carries meaning: sitting at a desk says you are working, walking into the lounge says you are free to talk, and standing at a whiteboard says you are presenting. The interface follows the same idea — warm paper, hard ink borders, offset shadows, lime, coral and cobalt accents, and display type that scales with the room.</p>
+<ul data-in>
+<li><b>A real floor plan.</b> Walk between a studio, meeting room, lounge and desk pod with a pixel avatar.</li>
+<li><b>Proximity video and voice.</b> Calls begin when you are close and end when you walk away.</li>
+<li><b>Room chat.</b> Messages, emoji and presence attached to the space you are in.</li>
+<li><b>Screen sharing and whiteboards.</b> Sit at a computer or stand at a board and present to the room.</li>
+<li><b>Public and private rooms.</b> Join the shared lobby or create a named room with an optional password.</li>
+<li><b>Works on phones.</b> A virtual joystick and responsive overlays replace the keyboard controls.</li>
+<li><b>No account.</b> Pick a name, choose an avatar and walk in. Nothing is stored after you leave.</li>
+</ul>
+
+<h2 data-in>Inside the build</h2>
+<p data-in>The client is a Vite-built React app wrapped around a Phaser canvas. Phaser handles the floor, collisions, depth sorting and avatar movement through three scenes — Bootstrap, Game and Background. React renders everything around the canvas: the entry flow, room selection, room rail, chat, controls and marketing pages. Colyseus rooms keep players and messages in sync over WebSockets, while PeerJS establishes the WebRTC media streams for everyone standing near you. Redux Toolkit holds the session, room and presence state; the WebRTC and screen-share managers sit beside it as plain services.</p>
+<ul data-in>
+<li><b>World layer.</b> Phaser 3 with Tiled maps, pixel characters, computers, whiteboards and vending machines. Pixel assets stay crisp with <span class="mono">image-rendering: pixelated</span>.</li>
+<li><b>Network layer.</b> Colyseus rooms for position, presence and chat; PeerJS for peer-to-peer media and screen sharing.</li>
+<li><b>App layer.</b> React Router routes for <span class="mono">/</span>, <span class="mono">/play</span>, <span class="mono">/features</span>, <span class="mono">/about</span> and <span class="mono">/docs</span>.</li>
+<li><b>Responsive layer.</b> Fluid <span class="mono">clamp()</span> display type, a 52px in-game rail on small screens, and overlays that stack above the joystick.</li>
+</ul>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#14201b 0%,#2f4a3f 55%,#9fbf63)">drop floor.png here · /assets/img/oasis/floor.png</div><img src="/assets/img/oasis/floor.png" alt="The OASIS floor with room chat open" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>The floor.</b> Walk, sit, chat and share a screen — the whole room is one connected space.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#1a1a1c 0%,#3a3b40 55%,#d8b25a)">drop rooms.png here · /assets/img/oasis/rooms.png</div><img src="/assets/img/oasis/rooms.png" alt="OASIS room selection screen" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Choose a door.</b> The public lobby or a custom room with an optional password.</p>
+
+<div class="shot" data-in><div class="ph" style="background:linear-gradient(135deg,#101816 0%,#293f37 55%,#e07a4f)">drop chat.png here · /assets/img/oasis/chat.png</div><img src="/assets/img/oasis/chat.png" alt="OASIS in-room chat overlay" loading="lazy" onerror="this.remove()"></div>
+<p class="cap"><b>Room chat.</b> Messages, emoji and presence stay attached to the space you are standing in.</p>
+
+<h2 data-in>Controls</h2>
+<ul data-in>
+<li><span class="mono">W A S D</span> / arrow keys — walk around</li>
+<li><span class="mono">E</span> — sit down or stand up</li>
+<li><span class="mono">R</span> — share your screen at a computer</li>
+<li><span class="mono">Enter</span> — open chat</li>
+<li><span class="mono">Esc</span> — close chat or a dialog</li>
+</ul>
+
+<h2 data-in>Next environment pass</h2>
+<p data-in>The world already ships with a Tiled floor map, office tilesets, pixel characters, computers, whiteboards, chairs and vending machines. The next pass makes it feel more alive without replacing the map: map variants for the lounge, studio and meeting room, layered ambient props, a slow day/night light shift, animated screens and vending machines, room tone and footsteps under the WebRTC audio, and detail tiers keyed to device width and frame budget.</p>
+
+<div class="pn"><div>previous<a href="/projects/metatrader">← MetaTrader</a></div><div>next<a href="/projects/cex">CEX →</a></div></div>
+</div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="/assets/js/pond.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
